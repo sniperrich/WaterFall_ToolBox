@@ -137,6 +137,6 @@ class SettingUi(object):
         self.FileTitle_2.setText(_translate("Setting", "关于"))
         self.StrongBodyLabel.setText(_translate("Setting", "Waterfall Toolbox"))
         self.BodyLabel_2.setText(_translate("Setting", "一个基于PYTHON的开源GUI工具程序。                              作者:Eros"))
-        self.BodyLabel.setText(_translate("Setting", "版本：Beta 0.3"))
+        self.BodyLabel.setText(_translate("Setting", "版本：Realese 1.6"))
         self.HyperlinkLabel.setText(_translate("Setting", "访问BiliBili"))
 from qfluentwidgets import BodyLabel, CardWidget, CheckBox, ComboBox, HyperlinkLabel, ImageLabel, LargeTitleLabel, SimpleCardWidget, StrongBodyLabel, SubtitleLabel
