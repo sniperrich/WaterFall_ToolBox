@@ -15,6 +15,8 @@ from dll_interface import DllInterface
 from mdown_interface import MdownInterface
 from api_interface import ApiInterface
 from vdown_interface import VdownInterface
+from chat_interface import Aest
+from bubble_messageui import ChatWidget
 class Widget(QFrame):
 
     def __init__(self, text: str, parent=None):
@@ -40,7 +42,7 @@ class Window(FluentWindow):
 
         self.folderInterface = ApiInterface(self)
         self.settingInterface = SettingInterface(self)
-        self.albumInterface = Widget('Please choose music or video', self)
+        self.albumInterface = Aest(self)
         self.albumInterface1 = MdownInterface(self)
         self.albumInterface2 = VdownInterface(self)
 

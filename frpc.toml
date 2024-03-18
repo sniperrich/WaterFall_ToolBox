@@ -1,0 +1,13 @@
+serverAddr = "154.16.248.117"
+serverPort = 17001
+auth.token = "1145141919810"
+transport.protocol = "kcp"
+
+[[proxies]]
+name = "clientd6dfe320-9fdc-4d54-a29e-7443c5c0b640"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 2345
+remotePort = 13365
+transport.useEncryption = true
+transport.useCompression = true

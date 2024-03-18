@@ -205,7 +205,7 @@ class Ui_Vdown(object):
         ppass = self.LineEdit_4.text()
         print(self.LineEdit_2.text())
         if purl!="":
-            print("{"+requests.get("https://api.lolimi.cn/API/123pan-main/?url=" + purl + "&" + ppass).text.split("{")[1])
+            print("{"+requests.get("https://api.lolimi.cn/API/123pan-main/?url=" + purl + "&pwd=" + ppass).text.split("{")[1])
             dic2 = json.loads("{"+requests.get("https://api.lolimi.cn/API/123pan-main/?url=" + purl + "&" + ppass).text.split("{")[1])
             if dic2["info"] != "获取下载地址失败":
                 w = MessageBox(
@@ -243,7 +243,7 @@ class Ui_Vdown(object):
         ppass=self.LineEdit_3.text()
         print(self.LineEdit.text())
         if purl != "":
-            dic2=json.loads(requests.get("https://api.lolimi.cn/API/lanzou/?url="+purl+"&"+ppass).text)
+            dic2=json.loads(requests.get("https://api.lolimi.cn/API/lanzou/?url="+purl+"&pwd="+ppass).text)
             if dic2["msg"]=="解析成功":
                 w = MessageBox(
                     '提示',

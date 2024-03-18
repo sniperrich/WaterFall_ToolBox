@@ -22,16 +22,16 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import QObject,QRect
 import sys
 
-headers = {'User-Agent':'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:23.0) Gecko/20100101 Firefox/23.0'}
-req = Request(url="https://ip.900cha.com/#google_vignette", headers=headers)
-html=urlopen(req).read()
-bs = BeautifulSoup(html,"html.parser")
-nameList = bs.find_all("li",{"class":"list-item mt-2"})
-city=nameList[1].getText()[13:].split(" ")[3]+"   "+nameList[1].getText()[13:].split(" ")[4]+"   "+nameList[1].getText()[13:].split(" ")[5]
-rep = requests.get('http://www.tianqiapi.com/api?version=v6&appid=68279872&appsecret=szWI7YeK&city='+nameList[1].getText()[13:].split(" ")[5].strip())
-rep.encoding = 'utf-8'
-print(nameList[1].getText()[13:].split(" ")[5])
-print(rep.json())
+# headers = {'User-Agent':'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:23.0) Gecko/20100101 Firefox/23.0'}
+# req = Request(url="https://ip.900cha.com/#google_vignette", headers=headers)
+# html=urlopen(req).read()
+# bs = BeautifulSoup(html,"html.parser")
+# nameList = bs.find_all("li",{"class":"list-item mt-2"})
+# city=nameList[1].getText()[13:].split(" ")[3]+"   "+nameList[1].getText()[13:].split(" ")[4]+"   "+nameList[1].getText()[13:].split(" ")[5]
+# rep = requests.get('http://www.tianqiapi.com/api?version=v6&appid=68279872&appsecret=szWI7YeK&city='+nameList[1].getText()[13:].split(" ")[5].strip())
+# rep.encoding = 'utf-8'
+# print(nameList[1].getText()[13:].split(" ")[5])
+# print(rep.json())
 
 class Ui_dll(object):
 
@@ -335,11 +335,11 @@ class Ui_dll(object):
         self.CommonTitile.setText(_translate("Common", "常用"))
         self.PicTitle.setText(_translate("Common", "天气预报"))
         self.AudioInputLabel.setText(_translate("Common", "目前天气"))
-        self.AudioInputLabel2.setText(_translate("Common","天气："+rep.json()["wea"]+"       温度："+rep.json()["tem"]+'°C'))
-        self.VideoOutputLabel_2.setText(_translate("Common", "风的信息"))
-        self.VideoOutputLabel.setText(_translate("Common","风向："+rep.json()["win"]+"       风速："+rep.json()["win_speed"]))
-        self.InputLabel.setText(_translate("Common", "当前城市"))
-        self.InputLabel2.setText(_translate("Common",city))
+        # self.AudioInputLabel2.setText(_translate("Common","天气："+rep.json()["wea"]+"       温度："+rep.json()["tem"]+'°C'))
+        # self.VideoOutputLabel_2.setText(_translate("Common", "风的信息"))
+        # self.VideoOutputLabel.setText(_translate("Common","风向："+rep.json()["win"]+"       风速："+rep.json()["win_speed"]))
+        # self.InputLabel.setText(_translate("Common", "当前城市"))
+        # self.InputLabel2.setText(_translate("Common",city))
         self.AudioParmsTitle.setText(_translate("Common", "系统占用"))
         self.BitrateLabel.setText(_translate("Common", "CPU占用"))
         self.BitrateLabel2.setFormat(_translate("Common", "请点击开始计算"))
